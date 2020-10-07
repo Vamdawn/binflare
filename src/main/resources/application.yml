@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 50606
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://47.96.7.143:3609/FLARE?autoReconnect=true&failOverReadOnly=false
+    username: FLARE
+    password: Fight4life
