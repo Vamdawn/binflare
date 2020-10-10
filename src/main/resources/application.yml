@@ -14,3 +14,11 @@ spring:
     url: jdbc:mysql://47.96.7.143:3609/FLARE?autoReconnect=true&failOverReadOnly=false
     username: FLARE
     password: Fight4life
+
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3609/FLARE?autoReconnect=true&failOverReadOnly=false
+    username: FLARE
+    password: Fight4life
