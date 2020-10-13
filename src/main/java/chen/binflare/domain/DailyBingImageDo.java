@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Data
@@ -16,14 +17,15 @@ public class DailyBingImageDo {
     @Id
     private Integer id;
 
-    private LocalDate date;
+    @Column(name = "image_date")
+    private LocalDate imageDate;
 
     @Column(name = "image_url")
     private String imageUrl;
 
     @Column(name = "create_time")
-    private Long createTime;
+    private Timestamp createTime;
 
     @Column(name = "update_time")
-    private Long updateTime;
+    private Timestamp updateTime;
 }

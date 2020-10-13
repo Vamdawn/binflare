@@ -18,7 +18,7 @@ public class ResourceServiceImpl implements ResourceService {
 
     @Override
     public SplashResourceDto getSplashResource() {
-        Optional<DailyBingImageDo> optionalDailyBingImageDo = dailyBingImageDao.findTopByDate(LocalDate.now());
+        Optional<DailyBingImageDo> optionalDailyBingImageDo = dailyBingImageDao.findTopByImageDate(LocalDate.now());
         String imageUrl = null;
         if (optionalDailyBingImageDo.isPresent()) {
             DailyBingImageDo dailyBingImageDo = optionalDailyBingImageDo.get();

@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface DailyBingImageDao extends BaseDao<DailyBingImageDo, Integer> {
 
-    Optional<DailyBingImageDo> findTopByDate(LocalDate date);
+    Optional<DailyBingImageDo> findTopByImageDate(LocalDate imageDate);
 }
