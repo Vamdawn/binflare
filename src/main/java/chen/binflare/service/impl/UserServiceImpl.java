@@ -1,8 +1,8 @@
 package chen.binflare.service.impl;
 
 import chen.binflare.dao.UserDao;
+import chen.binflare.domain.UserDo;
 import chen.binflare.dto.UserInfoDto;
-import chen.binflare.entity.UserDo;
 import chen.binflare.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

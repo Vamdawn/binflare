@@ -1,4 +1,4 @@
-package chen.binflare.entity;
+package chen.binflare.domain;
 
 import lombok.Data;
 
