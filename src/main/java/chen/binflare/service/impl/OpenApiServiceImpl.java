@@ -22,10 +22,10 @@ public class OpenApiServiceImpl implements OpenApiService {
     @Autowired
     private DailyBingImageDao dailyBingImageDao;
 
-    @Value("${open.api.bing.daily.image.url}")
+    @Value("${com.bing.daily.image.url}")
     private String bingDailyImageUrl;
 
-    @Value("${open.api.bing.base.url}")
+    @Value("${com.bing.base.url}")
     private String bingBaseUrl;
 
     @Override
