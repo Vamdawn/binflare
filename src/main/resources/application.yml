@@ -26,6 +26,6 @@ spring:
     password: Fight4life
 logging:
   file:
-    path: /data/${spring.application.name}
+    path: /data/${spring.application.name}/logs
     max-size: 1GB
     max-history: 30
