@@ -50,6 +50,7 @@ public class OpenApiServiceImpl implements OpenApiService {
                     dailyBingImageDo.setImageUrl(imageUrl);
                     dailyBingImageDao.save(dailyBingImageDo);
                 }
+                log.info("[Refresh][DailyBingImage] - [date : {}][link : {}]", now, imageUrl);
             }
         } catch (Exception e) {
             log.error("[ERROR][Record][DailyBingImage]", e);
