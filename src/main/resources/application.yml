@@ -7,6 +7,15 @@ spring:
 server:
   port: 50606
 
+open:
+  api:
+    bing:
+      daily:
+        image:
+          url: "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
+      base:
+        url: "https://cn.bing.com"
+
 ---
 spring:
   profiles: dev
