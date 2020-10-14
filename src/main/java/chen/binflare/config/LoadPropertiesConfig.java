@@ -5,5 +5,6 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:thirdparty.properties")
+@PropertySource("classpath:logging.properties")
 public class LoadPropertiesConfig {
 }
