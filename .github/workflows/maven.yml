@@ -32,12 +32,14 @@ jobs:
           deploy_user: ${{ secrets.DEPLOY_USER }}
         run: |
           SSH_PATH="$HOME/.ssh"
+          REPO=binflare
           mkdir -p $SSH_PATH
           touch "$SSH_PATH/known_hosts"
           echo "$deploy_key" >> "$SSH_PATH/id_rsa"
           chmod 700 "$SSH_PATH"
           chmod 600 "$SSH_PATH/known_hosts"
           chmod 600 "$SSH_PATH/id_rsa"
+          scp -r target/$REPO*.jar $deploy_user@$deploy_host:/data/tmp/$REPO.jar
           ssh-keyscan -t rsa $deploy_host >> "$SSH_PATH/known_hosts"
-          ssh -o StrictHostKeyChecking=no -i $SSH_PATH/id_rsa -A -tt $deploy_user@$deploy_host ls
+          ssh -o StrictHostKeyChecking=no -i $SSH_PATH/id_rsa -A -tt $deploy_user@$deploy_host sh /data/deploy_java.sh
 
