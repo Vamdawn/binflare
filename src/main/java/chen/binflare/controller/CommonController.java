@@ -1,6 +1,6 @@
 package chen.binflare.controller;
 
-import chen.binflare.commons.dto.ResponseDto;
+import chen.binflare.common.dto.ResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

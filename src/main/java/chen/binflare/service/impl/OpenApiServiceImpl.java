@@ -1,9 +1,9 @@
 package chen.binflare.service.impl;
 
-import chen.binflare.dao.DailyBingImageDao;
-import chen.binflare.entity.DailyBingImageEntity;
+import chen.binflare.dao.DailyBingImageDAO;
+import chen.binflare.entity.DailyBingImageDO;
 import chen.binflare.service.OpenApiService;
-import chen.binflare.utils.HttpUtils;
+import chen.binflare.util.HttpUtils;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.Request;
@@ -20,7 +20,7 @@ import java.time.LocalDate;
 public class OpenApiServiceImpl implements OpenApiService {
 
     @Autowired
-    private DailyBingImageDao dailyBingImageDao;
+    private DailyBingImageDAO dailyBingImageDao;
 
     @Value("${com.bing.daily.image.url}")
     private String bingDailyImageUrl;
@@ -45,10 +45,10 @@ public class OpenApiServiceImpl implements OpenApiService {
                 if (dailyBingImageDao.findTopByImageDate(now).isPresent()) {
                     dailyBingImageDao.updateImageUrlByImageDate(now, imageUrl);
                 } else {
-                    DailyBingImageEntity dailyBingImageEntity = new DailyBingImageEntity();
-                    dailyBingImageEntity.setImageDate(now);
-                    dailyBingImageEntity.setImageUrl(imageUrl);
-                    dailyBingImageDao.save(dailyBingImageEntity);
+                    DailyBingImageDO dailyBingImageDO = new DailyBingImageDO();
+                    dailyBingImageDO.setImageDate(now);
+                    dailyBingImageDO.setImageUrl(imageUrl);
+                    dailyBingImageDao.save(dailyBingImageDO);
                 }
                 log.info("[Refresh][DailyBingImage] - [date : {}][link : {}]", now, imageUrl);
             }

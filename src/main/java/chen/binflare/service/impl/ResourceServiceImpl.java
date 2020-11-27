@@ -1,8 +1,8 @@
 package chen.binflare.service.impl;
 
-import chen.binflare.dao.DailyBingImageDao;
-import chen.binflare.dto.SplashResourceDto;
-import chen.binflare.entity.DailyBingImageEntity;
+import chen.binflare.dao.DailyBingImageDAO;
+import chen.binflare.dto.SplashResourceDTO;
+import chen.binflare.entity.DailyBingImageDO;
 import chen.binflare.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,16 +14,16 @@ import java.util.Optional;
 public class ResourceServiceImpl implements ResourceService {
 
     @Autowired
-    private DailyBingImageDao dailyBingImageDao;
+    private DailyBingImageDAO dailyBingImageDao;
 
     @Override
-    public SplashResourceDto getSplashResource() {
-        Optional<DailyBingImageEntity> optionalDailyBingImageDo = dailyBingImageDao.findTopByImageDate(LocalDate.now());
+    public SplashResourceDTO getSplashResource() {
+        Optional<DailyBingImageDO> optionalDailyBingImageDo = dailyBingImageDao.findTopByImageDate(LocalDate.now());
         String imageUrl = null;
         if (optionalDailyBingImageDo.isPresent()) {
-            DailyBingImageEntity dailyBingImageEntity = optionalDailyBingImageDo.get();
-            imageUrl = dailyBingImageEntity.getImageUrl();
+            DailyBingImageDO dailyBingImageDO = optionalDailyBingImageDo.get();
+            imageUrl = dailyBingImageDO.getImageUrl();
         }
-        return SplashResourceDto.builder().imageUrl(imageUrl).build();
+        return SplashResourceDTO.builder().imageUrl(imageUrl).build();
     }
 }

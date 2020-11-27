@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class SplashResourceDto {
+public class SplashResourceDTO {
 
     private String imageUrl;
 }

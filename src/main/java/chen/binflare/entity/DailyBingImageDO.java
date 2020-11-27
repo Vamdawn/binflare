@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "daily_bing_image")
-public class DailyBingImageEntity {
+public class DailyBingImageDO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

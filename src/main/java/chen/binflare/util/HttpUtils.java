@@ -1,4 +1,4 @@
-package chen.binflare.utils;
+package chen.binflare.util;
 
 import okhttp3.OkHttpClient;
 

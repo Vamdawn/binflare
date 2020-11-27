@@ -1,7 +1,6 @@
 package chen.binflare.dao;
 
-import chen.binflare.commons.dao.BaseDao;
-import chen.binflare.entity.DailyBingImageEntity;
+import chen.binflare.entity.DailyBingImageDO;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,12 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.Optional;
 
-public interface DailyBingImageDao extends BaseDao<DailyBingImageEntity, Integer> {
+public interface DailyBingImageDAO extends BaseRepository<DailyBingImageDO, Integer> {
 
-    Optional<DailyBingImageEntity> findTopByImageDate(LocalDate imageDate);
+    Optional<DailyBingImageDO> findTopByImageDate(LocalDate imageDate);
 
     @Modifying
     @Transactional(rollbackFor = Exception.class)
-    @Query("update DailyBingImageEntity set imageUrl = ?2 where imageDate = ?1")
+    @Query("update DailyBingImageDO set imageUrl = ?2 where imageDate = ?1")
     void updateImageUrlByImageDate(LocalDate imageDate, String imageUrl);
 }
