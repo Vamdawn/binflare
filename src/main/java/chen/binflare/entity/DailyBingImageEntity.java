@@ -1,4 +1,4 @@
-package chen.binflare.domain;
+package chen.binflare.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "daily_bing_image")
-public class DailyBingImageDo {
+public class DailyBingImageEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

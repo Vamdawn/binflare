@@ -1,7 +1,7 @@
 package chen.binflare.service.impl;
 
 import chen.binflare.dao.DailyBingImageDao;
-import chen.binflare.domain.DailyBingImageDo;
+import chen.binflare.entity.DailyBingImageEntity;
 import chen.binflare.service.OpenApiService;
 import chen.binflare.utils.HttpUtils;
 import com.alibaba.fastjson.JSONObject;
@@ -45,10 +45,10 @@ public class OpenApiServiceImpl implements OpenApiService {
                 if (dailyBingImageDao.findTopByImageDate(now).isPresent()) {
                     dailyBingImageDao.updateImageUrlByImageDate(now, imageUrl);
                 } else {
-                    DailyBingImageDo dailyBingImageDo = new DailyBingImageDo();
-                    dailyBingImageDo.setImageDate(now);
-                    dailyBingImageDo.setImageUrl(imageUrl);
-                    dailyBingImageDao.save(dailyBingImageDo);
+                    DailyBingImageEntity dailyBingImageEntity = new DailyBingImageEntity();
+                    dailyBingImageEntity.setImageDate(now);
+                    dailyBingImageEntity.setImageUrl(imageUrl);
+                    dailyBingImageDao.save(dailyBingImageEntity);
                 }
                 log.info("[Refresh][DailyBingImage] - [date : {}][link : {}]", now, imageUrl);
             }
