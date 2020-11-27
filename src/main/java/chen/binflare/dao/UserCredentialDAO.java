@@ -2,5 +2,7 @@ package chen.binflare.dao;
 
 import chen.binflare.entity.UserCredentialDO;
 
-public interface UserCredentialDAO extends BaseRepository<UserCredentialDO, Long> {
+import java.math.BigInteger;
+
+public interface UserCredentialDAO extends BaseRepository<UserCredentialDO, BigInteger> {
 }
