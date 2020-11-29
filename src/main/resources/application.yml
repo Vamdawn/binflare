@@ -11,7 +11,9 @@ server:
 
 ---
 spring:
-  profiles: dev
+  config:
+    activate:
+      on-profile: dev
   datasource:
     url: jdbc:mysql://47.96.7.143:3609/FLARE?autoReconnect=true&failOverReadOnly=false
     username: FLARE
@@ -19,7 +21,9 @@ spring:
 
 ---
 spring:
-  profiles: prod
+  config:
+    activate:
+      on-profile: prod
   datasource:
     url: jdbc:mysql://localhost:3609/FLARE?autoReconnect=true&failOverReadOnly=false
     username: FLARE
@@ -27,5 +31,7 @@ spring:
 logging:
   file:
     path: /data/${spring.application.name}/logs
-    max-size: 1GB
-    max-history: 30
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      max-history: 30
