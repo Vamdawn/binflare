@@ -3,16 +3,16 @@ package chen.binflare.common.dto;
 import lombok.Data;
 
 @Data
-public class ResponseDto<T> {
+public class ResponseDTO<T> {
 
     private Integer code;
     private String msg;
     private T data;
 
-    private ResponseDto() {
+    private ResponseDTO() {
     }
 
-    private ResponseDto(Integer code, String msg, T data) {
+    private ResponseDTO(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
@@ -23,8 +23,8 @@ public class ResponseDto<T> {
      *
      * @return {"code": 0}
      */
-    static public ResponseDto<?> success() {
-        return new ResponseDto<>(0, null, null);
+    static public ResponseDTO<?> success() {
+        return new ResponseDTO<>(0, null, null);
     }
 
     /**
@@ -34,8 +34,8 @@ public class ResponseDto<T> {
      * @param <R>  数据类型
      * @return {"code": 0, "data": data}
      */
-    static public <R> ResponseDto<R> success(R data) {
-        return new ResponseDto<>(0, null, data);
+    static public <R> ResponseDTO<R> success(R data) {
+        return new ResponseDTO<>(0, null, data);
     }
 
     /**
@@ -45,7 +45,7 @@ public class ResponseDto<T> {
      * @param msg  errmsg
      * @return {"code": 0, "msg": "error message"}
      */
-    static public ResponseDto<?> fail(Integer code, String msg) {
-        return new ResponseDto<>(code, msg, null);
+    static public ResponseDTO<?> fail(Integer code, String msg) {
+        return new ResponseDTO<>(code, msg, null);
     }
 }

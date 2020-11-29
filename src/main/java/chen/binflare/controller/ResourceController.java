@@ -1,6 +1,6 @@
 package chen.binflare.controller;
 
-import chen.binflare.common.dto.ResponseDto;
+import chen.binflare.common.dto.ResponseDTO;
 import chen.binflare.dto.SplashResourceDTO;
 import chen.binflare.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class ResourceController {
     private ResourceService resourceService;
 
     @GetMapping("/splash")
-    public ResponseDto<SplashResourceDTO> getSplashResource() {
-        return ResponseDto.success(resourceService.getSplashResource());
+    public ResponseDTO<SplashResourceDTO> getSplashResource() {
+        return ResponseDTO.success(resourceService.getSplashResource());
     }
 }
