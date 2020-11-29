@@ -37,4 +37,4 @@ jobs:
           chmod 600 "$SSH_PATH/id_rsa"
           ssh-keyscan -t rsa $HOST >> "$SSH_PATH/known_hosts"
           scp -r target/$REPO*.jar $USER@$HOST:/data/tmp/$REPO.jar
-          ssh -o StrictHostKeyChecking=no -i $SSH_PATH/id_rsa -A -tt $USER@$HOST nohup /data/deploy_java.sh $REPO
+          ssh -o StrictHostKeyChecking=no -i $SSH_PATH/id_rsa -A -tt $USER@$HOST nohup /data/deploy.d/deploy_java.sh $REPO >> /dev/null
