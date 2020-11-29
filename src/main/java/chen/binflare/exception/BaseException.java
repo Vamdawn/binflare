@@ -1,25 +1,26 @@
 package chen.binflare.exception;
 
+import chen.binflare.config.GlobalExceptionHandler;
 import lombok.Getter;
 
+/**
+ * Custom Base Exception,
+ * will be handled by {@link GlobalExceptionHandler}
+ */
 @Getter
 public class BaseException extends Exception {
 
-    /**
-     * Http Status
-     */
     private final Integer status;
-
-    /**
-     * Business Code
-     */
     private final Integer code;
-
-    /**
-     * Exception Message
-     */
     private final String msg;
 
+    /**
+     * Base Exception Constructor
+     *
+     * @param status Http Status
+     * @param code   Business Code
+     * @param msg    Exception Message
+     */
     public BaseException(Integer status, Integer code, String msg) {
         super();
         this.status = status;
