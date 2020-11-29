@@ -4,6 +4,7 @@ import chen.binflare.dao.UserDAO;
 import chen.binflare.dto.UsersDTO;
 import chen.binflare.entity.UserDO;
 import chen.binflare.exception.BaseException;
+import chen.binflare.exception.Exceptions;
 import chen.binflare.service.UsersService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -29,7 +30,7 @@ public class UsersServiceImpl implements UsersService {
     public UsersDTO getUserInfo(Long id) throws BaseException {
         Optional<UserDO> optionalUserDO = userDAO.findById(id);
         if (!optionalUserDO.isPresent()) {
-            throw new BaseException(200, 20001, "用户不存在");
+            throw Exceptions.USER_NOT_FOUND.checked();
         }
         UserDO userDO = optionalUserDO.get();
         UsersDTO usersDTO = new UsersDTO();

@@ -46,7 +46,7 @@ public class GlobalExceptionHandler {
                 e instanceof ServletRequestBindingException ||
                 e instanceof HttpMessageNotReadableException) {
             httpServletResponse.setStatus(400);
-            return ResponseDTO.fail(10000, "参数错误");
+            return ResponseDTO.fail(10000, "request validation error");
         } else {
             throw e;
         }
