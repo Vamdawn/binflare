@@ -8,6 +8,10 @@
     <artifactId>binflare</artifactId>
     <version>0.0.1</version>
 
+    <properties>
+        <swagger-version>3.0.0</swagger-version>
+    </properties>
+
     <!-- Inherit defaults from Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -42,6 +46,17 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger-version}</version>
         </dependency>
 
         <!-- okhttp -->
