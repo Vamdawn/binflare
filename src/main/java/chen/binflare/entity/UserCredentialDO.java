@@ -3,7 +3,6 @@ package chen.binflare.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Data
@@ -14,7 +13,7 @@ public class UserCredentialDO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private BigInteger id;
+    private Long id;
 
     @Column(name = "user_id")
     private Long userId;
