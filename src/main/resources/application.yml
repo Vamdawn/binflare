@@ -15,9 +15,9 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    url: jdbc:mysql://47.96.7.143:3609/FLARE?autoReconnect=true&failOverReadOnly=false
-    username: FLARE
-    password: Fight4life
+    url: ENC(tAhQWSs9tNwLoNNKLvC/tWx2cpu9oGMn1M3BjXAYGVc9uVst6LK0yypcLLzuyPFINAisK0gTyWHyTBpevOWuQwyW6nlwm9l8nGeZPiOkWzB926NqFAiT/+jwkIPTw9mKwHsFkL36HH1wXTQLNRBNRw==)
+    username: ENC(9QPMfc7YGSSGoRE889pHWq2MXBlnXSKdE/QkQSOxTbVDUXLpsjjNXaR0eTLbOUya)
+    password: ENC(Aw8x89jXMDL7tD54wLpheWJhav3jZz3nkawVH/Dyb/iQDoarffyF7TgnvIb9npwR)
 
 ---
 spring:
@@ -25,9 +25,9 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:mysql://localhost:3609/FLARE?autoReconnect=true&failOverReadOnly=false
-    username: FLARE
-    password: Fight4life
+    url: ENC(+/qv2BnXLD8lyyAi5QHzXVGdPdKu9XlllHoMoFyC7LY0/Fqje5g0frCD8K1/KCBJtBcu+mv6dTon9k+qVGWxw0iCo0VcZIJ6LwiqUrchKMkzXXzfKGx+G4m4SKIwpyqvim34+KIJGx/70FxwyU9l7w==)
+    username: ENC(YJRqv6FUP3bvZ0YcHNINM5GvUevE9wMtHTAw1xTaxuekrDsoKa0F08mle5Dsm6cy)
+    password: ENC(Lqc3zKM1szPYIn5zrHWatfoY3cE0gP/XYP3WxLm2S0MJmc9rfNdBXpt3jnz+v/HQ)
 logging:
   file:
     path: /data/${spring.application.name}/logs
