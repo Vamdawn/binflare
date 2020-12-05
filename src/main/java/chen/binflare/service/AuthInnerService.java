@@ -8,6 +8,13 @@ import chen.binflare.bo.AuthPayloadBO;
 public interface AuthInnerService {
 
     /**
+     * refresh login public & private key
+     *
+     * @return result
+     */
+    boolean refreshLoginKey();
+
+    /**
      * sign with common private key as jwt token
      *
      * @param authPayloadBO auth payload

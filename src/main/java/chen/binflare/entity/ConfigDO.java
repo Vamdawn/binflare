@@ -3,6 +3,7 @@ package chen.binflare.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -19,4 +20,10 @@ public class ConfigDO {
 
     @Column(name = "config_value")
     private String configValue;
+
+    @Column(name = "create_time")
+    private LocalDateTime createTime;
+
+    @Column(name = "update_time")
+    private LocalDateTime updateTime;
 }
