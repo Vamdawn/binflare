@@ -1,7 +1,7 @@
 package chen.binflare.config;
 
-import chen.binflare.common.dto.ResponseDTO;
 import chen.binflare.exception.BaseException;
+import chen.binflare.module.dto.ResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;

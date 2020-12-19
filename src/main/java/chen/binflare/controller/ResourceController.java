@@ -1,7 +1,7 @@
 package chen.binflare.controller;
 
-import chen.binflare.common.dto.ResponseDTO;
 import chen.binflare.dto.SplashResourceDTO;
+import chen.binflare.module.dto.ResponseDTO;
 import chen.binflare.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

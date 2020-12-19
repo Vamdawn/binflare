@@ -1,4 +1,4 @@
-package chen.binflare.common.dto;
+package chen.binflare.module.dto;
 
 import lombok.Data;
 
