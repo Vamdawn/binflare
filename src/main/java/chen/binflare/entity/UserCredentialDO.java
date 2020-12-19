@@ -13,16 +13,16 @@ public class UserCredentialDO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "user_id")
-    private Long userId;
+    private Integer userId;
 
     @Column(name = "credential_type")
-    private Integer credentialType;
+    private Byte credentialType;
 
-    @Column(name = "credential_uid")
-    private Integer credentialUid;
+    @Column(name = "credential_account")
+    private String credentialUid;
 
     @Column(name = "credential_secret")
     private Integer credentialSecret;

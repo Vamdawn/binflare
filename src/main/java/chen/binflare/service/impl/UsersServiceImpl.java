@@ -27,7 +27,7 @@ public class UsersServiceImpl implements UsersService {
      * @return userInfo
      */
     @Override
-    public UsersDTO getUserInfo(Long id) throws BaseException {
+    public UsersDTO getUserInfo(Integer id) throws BaseException {
         Optional<UserDO> optionalUserDO = userDAO.findById(id);
         if (!optionalUserDO.isPresent()) {
             throw Exceptions.USER_NOT_FOUND.checked();

@@ -18,7 +18,7 @@ public class UsersController {
     private UsersService usersService;
 
     @GetMapping("/{id}")
-    public ResponseDTO<UsersDTO> getUserInfo(@PathVariable Long id) throws BaseException {
+    public ResponseDTO<UsersDTO> getUserInfo(@PathVariable Integer id) throws BaseException {
         return ResponseDTO.success(usersService.getUserInfo(id));
     }
 }

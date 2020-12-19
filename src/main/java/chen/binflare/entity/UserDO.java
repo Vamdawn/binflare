@@ -13,19 +13,19 @@ public class UserDO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
-    @Column(name = "account_id")
-    private String accountId;
+    @Column(name = "account_no")
+    private String accountNo;
 
-    @Column(name = "nick")
-    private String nick;
+    @Column(name = "nick_name")
+    private String nickName;
 
-    @Column(name = "mobile")
-    private String mobile;
+    @Column(name = "avatar")
+    private String avatar;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "secret_key")
+    private String secretKey;
 
     @Column(name = "create_time")
     private LocalDateTime createTime;

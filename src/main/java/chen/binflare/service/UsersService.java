@@ -14,5 +14,5 @@ public interface UsersService {
      * @param id userId
      * @return userInfo
      */
-    UsersDTO getUserInfo(Long id) throws BaseException;
+    UsersDTO getUserInfo(Integer id) throws BaseException;
 }
