@@ -21,11 +21,8 @@ public class UserCredentialDO {
     @Column(name = "credential_type")
     private Byte credentialType;
 
-    @Column(name = "credential_account")
-    private String credentialUid;
-
-    @Column(name = "credential_secret")
-    private Integer credentialSecret;
+    @Column(name = "credential_value")
+    private String credentialValue;
 
     @Column(name = "create_time")
     private LocalDateTime createTime;
