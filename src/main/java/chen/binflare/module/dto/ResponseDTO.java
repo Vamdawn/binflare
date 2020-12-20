@@ -24,7 +24,7 @@ public class ResponseDTO<T> {
      * @return {"code": 0}
      */
     static public ResponseDTO<?> success() {
-        return new ResponseDTO<>(0, null, null);
+        return new ResponseDTO<>(0, "ok", null);
     }
 
     /**
@@ -35,7 +35,7 @@ public class ResponseDTO<T> {
      * @return {"code": 0, "data": data}
      */
     static public <R> ResponseDTO<R> success(R data) {
-        return new ResponseDTO<>(0, null, data);
+        return new ResponseDTO<>(0, "ok", data);
     }
 
     /**
