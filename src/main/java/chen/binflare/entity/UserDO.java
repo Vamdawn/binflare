@@ -24,8 +24,8 @@ public class UserDO {
     @Column(name = "avatar")
     private String avatar;
 
-    @Column(name = "secret_key")
-    private String secretKey;
+    @Column(name = "token")
+    private String token;
 
     @Column(name = "create_time")
     private LocalDateTime createTime;
