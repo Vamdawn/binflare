@@ -1,10 +1,10 @@
 package chen.binflare.service.impl;
 
-import chen.binflare.service.UserService;
+import chen.binflare.service.UsersService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class UserServiceImpl implements UserService {
+public class UsersServiceImpl implements UsersService {
 }
