@@ -7,12 +7,12 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-@ApiModel(description = "获取访问凭据返回")
+@ApiModel(description = "Response of get access token")
 public class CreateTokenRespDTO implements Serializable {
 
-    @ApiModelProperty(value = "用户编号")
+    @ApiModelProperty(value = "account number")
     private String accountNo;
 
-    @ApiModelProperty(value = "访问凭证")
+    @ApiModelProperty(value = "access token for apis")
     private String access_token;
 }
