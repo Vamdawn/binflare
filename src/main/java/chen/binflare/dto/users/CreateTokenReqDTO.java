@@ -20,8 +20,8 @@ public class CreateTokenReqDTO implements Serializable {
 
     @NotNull(message = "user type cannot be null")
     @ApiModelProperty(value = "鉴权账号类型")
-    private Byte userType;
+    private Integer userType;
 
     @ApiModelProperty(value = "鉴权密码类型")
-    private Byte passType;
+    private Integer passType;
 }
