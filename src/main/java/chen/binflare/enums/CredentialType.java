@@ -3,7 +3,7 @@ package chen.binflare.enums;
 public enum CredentialType {
 
     EMAIL(1, "EMAIL"),
-    PASSWORD(2, "PASSWORD");
+    PASSWORD(-1, "PASSWORD");
 
     private static final CredentialType[] CREDENTIAL_TYPE_LIST = CredentialType.values();
     private final Integer value;
