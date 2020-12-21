@@ -1,13 +1,14 @@
 package chen.binflare.dao;
 
 import chen.binflare.entity.ConfigDO;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-public interface ConfigDAO extends BaseRepository<ConfigDO, Integer> {
+public interface ConfigDAO extends JpaRepository<ConfigDO, Integer> {
 
     Optional<ConfigDO> findByConfigKey(String key);
 
