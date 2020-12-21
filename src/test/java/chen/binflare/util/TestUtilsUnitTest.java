@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.time.Instant;
 import java.util.Map;
 
-class JsonUtilsTest {
+class TestUtilsUnitTest {
 
     @Test
     void printPrettyJson() {
@@ -18,6 +18,6 @@ class JsonUtilsTest {
         m.put("c", ImmutableMap.of("k", "v"));
         m.put("d", Lists.newArrayList());
         m.put("e", Instant.now());
-        JsonUtils.printPrettyJson(m);
+        UnitTestUtils.printJson(m);
     }
 }
