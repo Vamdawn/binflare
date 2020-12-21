@@ -1,8 +1,8 @@
 package chen.binflare.controller;
 
+import chen.binflare.common.dto.ResponseDTO;
 import chen.binflare.dto.users.CreateTokenReqDTO;
 import chen.binflare.dto.users.CreateTokenRespDTO;
-import chen.binflare.module.dto.ResponseDTO;
 import chen.binflare.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;

@@ -1,6 +1,6 @@
 package chen.binflare.config;
 
-import chen.binflare.module.logging.RequestLoggingFilter;
+import chen.binflare.common.logging.RequestLoggingFilter;
 import com.google.common.collect.ImmutableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

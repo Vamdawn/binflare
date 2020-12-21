@@ -1,4 +1,4 @@
-package chen.binflare.module.logging;
+package chen.binflare.common.logging;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.filter.AbstractRequestLoggingFilter;
