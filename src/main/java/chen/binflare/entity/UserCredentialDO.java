@@ -18,11 +18,11 @@ public class UserCredentialDO {
     @Column(name = "user_id")
     private Integer userId;
 
-    @Column(name = "type")
-    private Byte type;
+    @Column(name = "credential_type")
+    private Byte credentialType;
 
-    @Column(name = "value")
-    private String value;
+    @Column(name = "credential_value")
+    private String credentialValue;
 
     @Column(name = "create_time")
     private Instant createTime;

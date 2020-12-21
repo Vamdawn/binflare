@@ -18,11 +18,11 @@ public class UserSecretDO {
     @Column(name = "user_id")
     private Integer userId;
 
-    @Column(name = "type")
-    private Byte type;
+    @Column(name = "secret_type")
+    private Byte secretType;
 
-    @Column(name = "value")
-    private String value;
+    @Column(name = "secret_value")
+    private String secretValue;
 
     @Column(name = "create_time")
     private Instant createTime;
