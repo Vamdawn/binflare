@@ -22,10 +22,8 @@ public class UsersController {
     @PostMapping("/token")
     public ResponseDTO<CreateTokenRespDTO> createAccessToken(@RequestBody @Validated CreateTokenReqDTO createTokenReqDTO) {
         return ResponseDTO.success(usersService.createAccessToken(
-                createTokenReqDTO.getUserName(),
-                createTokenReqDTO.getPassWord(),
-                createTokenReqDTO.getUserType(),
-                createTokenReqDTO.getPassType()
+                createTokenReqDTO.getUserType(), createTokenReqDTO.getUserName(),
+                createTokenReqDTO.getPassType(), createTokenReqDTO.getPassWord()
         ));
     }
 }

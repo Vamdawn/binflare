@@ -15,7 +15,7 @@ public class UsersServiceImpl implements UsersService {
     private UserCredentialDAO userCredentialDAO;
 
     @Override
-    public CreateTokenRespDTO createAccessToken(String userName, String passWord, Integer userType, Integer passType) {
+    public CreateTokenRespDTO createAccessToken(Integer userType, String userName, Integer passType, String passWord) {
         return null;
     }
 }

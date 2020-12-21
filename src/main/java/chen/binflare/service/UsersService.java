@@ -10,11 +10,11 @@ public interface UsersService {
     /**
      * Get AccessToken (user login)
      *
-     * @param userName authorization username
-     * @param passWord authorization password
      * @param userType authorization user type
+     * @param userName authorization username
      * @param passType authorization pass type
+     * @param passWord authorization password
      * @return
      */
-    CreateTokenRespDTO createAccessToken(String userName, String passWord, Integer userType, Integer passType);
+    CreateTokenRespDTO createAccessToken(Integer userType, String userName, Integer passType, String passWord);
 }
