@@ -3,7 +3,7 @@ package chen.binflare.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Data
 @Entity
@@ -28,8 +28,8 @@ public class UserDO {
     private String token;
 
     @Column(name = "create_time")
-    private LocalDateTime createTime;
+    private Instant createTime;
 
     @Column(name = "update_time")
-    private LocalDateTime updateTime;
+    private Instant updateTime;
 }

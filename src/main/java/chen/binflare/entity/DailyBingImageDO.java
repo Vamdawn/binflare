@@ -3,7 +3,7 @@ package chen.binflare.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.time.Instant;
 import java.time.LocalDate;
 
 @Data
@@ -23,8 +23,8 @@ public class DailyBingImageDO {
     private String imageUrl;
 
     @Column(name = "create_time")
-    private Timestamp createTime;
+    private Instant createTime;
 
     @Column(name = "update_time")
-    private Timestamp updateTime;
+    private Instant updateTime;
 }
