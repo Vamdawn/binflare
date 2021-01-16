@@ -10,6 +10,7 @@
 
     <properties>
         <swagger-version>3.0.0</swagger-version>
+        <mybatis-spring-boot-starter-version>2.1.4</mybatis-spring-boot-starter-version>
     </properties>
 
     <!-- Inherit defaults from Spring Boot -->
@@ -34,6 +35,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-spring-boot-starter-version}</version>
         </dependency>
 
         <dependency>
